@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>File Application</h1>
+<h2>Http upload with multipart </h2>
+<p>This requires to add jersey-media-multipart-2.x in WEB-INF/lib</p>
+
+	<form action="file/upload" method="POST" enctype="multipart/form-data">
+
+		<input type="file" name="file" size="50" enctype="multipart/form-data"
+			placeholder="Upload Your Image" />
+		 
+		<input type="submit" value="Upload File" />
+
+	</form>
+
+</body>
+</html>

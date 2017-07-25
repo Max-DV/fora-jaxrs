@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form User</title>
+</head>
+<body>
+
+<form method="post" action="demo/users/web1.0">
+
+
+    Admin:  No<input type="radio" name="admin" value="false" checked="checked">
+            &nbsp;&nbsp;&nbsp;&nbsp;Yes
+    <input type="radio" name="admin" value="true" >
+
+    <span style="display: none;" class="statement">
+        Statement: <input type="text" name="statement">
+    </span>
+    <br/>
+
+    Name: <input type="text" name="name"><br/>
+    Email: <input type="email" name="email"><br/>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+
+</body>
+<script type="text/javascript">
+
+    const adminElement=document.querySelector("input[name=admin][value=true]");
+    const notAdminElement=document.querySelector("input[name=admin][value=false]");
+    const statementElement=document.querySelector("span.statement");
+
+
+
+    console.log(adminElement);
+    adminElement.addEventListener('change', event => onAdmin(true));
+    notAdminElement.addEventListener('change', event => onAdmin(false));
+
+
+    function onAdmin(bool){
+        const display = bool? "inline":"none";
+        statementElement.style.display=display;
+    }
+
+
+
+</script>
+</html>
